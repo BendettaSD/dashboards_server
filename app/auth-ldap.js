@@ -32,7 +32,7 @@ var LDAP_OPTS = {
 module.exports = function(app) {
     // Render local login form.
     app.get('/login', function(req, res) {
-        if(req.username) {
+        if(req.user) {
             return res.redirect('/');
         }
         res.render('login', {
